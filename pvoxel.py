@@ -13,7 +13,7 @@ moduledir = os.path.dirname(os.path.realpath(__file__))
 
 def Read_stl(filename):
     """
-    pvoxel.write(fileName)
+    pvoxel.Read_stl(filename)
 
     Read mesh data in the form of an <*.stl> file.
     
@@ -34,7 +34,7 @@ def Read_stl(filename):
 
 def stlGetFormat(filename):
     """
-    pvoxel.stlGetFormat(fileName)
+    pvoxel.stlGetFormat(filename)
 
     Get stl file format : ascii or binary.
     

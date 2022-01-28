@@ -13,7 +13,7 @@ import cvoxelise as lib
 
 def Read_stl(filename):
     """
-    voxel.write(fileName)
+    voxel.write(filename)
 
     Read mesh data in the form of an <*.stl> file.
     
@@ -27,7 +27,7 @@ def Read_stl(filename):
 
 def stlGetFormat(filename):
     """
-    voxel.stlGetFormat(fileName)
+    voxel.stlGetFormat(filename)
 
     Get stl file format : ascii or binary.
     
