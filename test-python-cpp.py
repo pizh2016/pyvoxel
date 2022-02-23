@@ -9,8 +9,8 @@ if __name__=='__main__':
     datapath="../modeldata"
     datapath = os.path.abspath(datapath)+"/"
     modellist = [x[:-4] for x in os.listdir(datapath) if os.path.isfile(datapath+x) and x.endswith(".stl")]
-    model = "model"
-    voxwidth = 4.0
+    model = "cube"
+    voxwidth = 1.0
 
     print('{0}{1}.stl'.format(datapath,model))
         
@@ -56,24 +56,24 @@ if __name__=='__main__':
 
 
 
-    # pvox = pvoxel.Voxel(NX,NY,NZ)
-    # start=time.time()
-    # print("pvoxel init")
-    # pvox.VOXELISE(meshVertexs,ray='xyz',parallel=False)
-    # print('gridOUTPUT\n',pvox.voxelgrid.shape, pvox.voxelgrid.sum())
-    # print('Python Voxelise time(P): {:6f}'.format(time.time()-start))
+    pvox = pvoxel.Voxel(NX,NY,NZ)
+    start=time.time()
+    print("pvoxel init")
+    pvox.VOXELISE(meshVertexs,ray='xyz',parallel=False)
+    print('gridOUTPUT\n',pvox.voxelgrid.shape, pvox.voxelgrid.sum())
+    print('Python Voxelise time(P): {:6f}'.format(time.time()-start))
 
-    # start=time.time()
-    # pvox.gen_vox_info()
-    # # print("nod_coor_abs\n",pvox.nod_coor_abs)
-    # print('Python Numbering time: {:6f}'.format(time.time()-start))
+    start=time.time()
+    pvox.gen_vox_info()
+    # print("nod_coor_abs\n",pvox.nod_coor_abs)
+    print('Python Numbering time: {:6f}'.format(time.time()-start))
     
-    # start=time.time()
-    # pvox.save_mesh('{0}{1}p.vtu'.format(datapath,model))
-    # print("Save vtu file FINISH!!!")
-    # print('Python writing time: {:6f}'.format(time.time()-start))
+    start=time.time()
+    pvox.save_mesh('{0}{1}p.vtu'.format(datapath,model))
+    print("Save vtu file FINISH!!!")
+    print('Python writing time: {:6f}'.format(time.time()-start))
 
-    # start=time.time()
-    # pvox.save_mesh('{0}{1}p.vtk'.format(datapath,model))
-    # print("Save vtk file FINISH!!!")
-    # print('Python writing time: {:6f}'.format(time.time()-start))
+    start=time.time()
+    pvox.save_mesh('{0}{1}p.vtk'.format(datapath,model))
+    print("Save vtk file FINISH!!!")
+    print('Python writing time: {:6f}'.format(time.time()-start))

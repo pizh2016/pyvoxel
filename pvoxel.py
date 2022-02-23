@@ -309,7 +309,7 @@ class Voxel:
 
         # Combine the results of each ray-tracing direction:
         if len(ray)>1:
-            gridOUTPUT = np.sum(gridOUTPUT,axis=3)>=len(ray)/2
+            gridOUTPUT = np.sum(gridOUTPUT,axis=3)>=int(len(ray)/2)
 
         ### RETURN THE OUTPUT GRID TO THE SIZE REQUIRED BY THE USER (IF IT WAS CHANGED EARLIER)
         #======================================================
